@@ -4,7 +4,27 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: const style = document.createElement('style');
+style.innerHTML = `
+  .text-custom span {
+    display: inline;
+    background: #006400;
+  }
+
+  .bible-header-custom {
+    margin: auto !important;
+    margin-bottom: 0.2em !important;
+    display: table !important;
+  }
+
+  #invisible .bible-header-custom {
+    margin: auto !important;
+    margin-bottom: 0.2em !important;
+    display: table !important;
+  }
+`;
+
+document.head.appendChild(style);0;
       background-color: black;
       font-family: Arial, sans-serif;
     }
