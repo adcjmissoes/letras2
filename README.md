@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Legenda do Holyrics</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: black;
+      background-color: transparent;
       font-family: Arial, sans-serif;
     }
 
