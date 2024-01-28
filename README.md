@@ -1,68 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Legenda do Holyrics</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      font-family: Arial, sans-serif;
-    }
+body {
+    margin: 0;    
+}
+#general {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+}
+#display{
+    text-align: center;
+    width: 100%;
+    height: 100%;    
+    color: white;
+}
+#visible {
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "Arial";
+}
+#invisible {
+    visibility: hidden;
+    width: 96%;
+    font-family: "Arial";
+}
+#alert {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+    height: 15%;
+    font-size: 64px;
+}
+#alert-invisible {
+    display: none;
+    visibility: hidden;
+}
+#img64 {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    position: inherit;
+}
+span.header {
+    display: block;
+    margin-bottom: 3vh; /*2.5%*/
+    white-space: nowrap;
+}
 
-    #lyrics-container {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-      line-height: 1.5;
-    }
+span.page-count {
+    font-size: 70%;
+    display: block;
+    white-space: nowrap;
+    text-align: right;
+}
 
-    .text-custom span {
-      display: inline;
-      background: #006400;
-    }
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: 0px black solid;
+}
 
-    .bible-header-custom {
-      margin: auto !important;
-      margin-bottom: 0.2em !important;
-      display: table !important;
-    }
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    text-indent: 0;
+    animation: marquee 5s linear infinite;
+    -webkit-animation: marquee 5s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
 
-    #invisible .bible-header-custom {
-      margin: auto !important;
-      margin-bottom: 0.2em !important;
-      display: table !important;
-    }
-  </style>
-</head>
-<body>
-  <div id="lyrics-container"></div>
-
-  <script>
-    const lyricsContainer = document.getElementById("lyrics-container");
-
-    // Função para atualizar a legenda
-    function updateLyrics(lyrics) {
-      lyricsContainer.innerHTML = lyrics;
-    }
-
-    // Simulação de atualização em tempo real das letras
-    setInterval(() => {
-      // Chamar a API do Holyrics para obter as letras atualizadas
-      fetch('http://192.168.0.169/stage-view/text2?disable_popup_fullscreen')
-        .then(response => response.text())
-        .then(data => {
-          // Atualizar a legenda na interface do usuário
-          updateLyrics(data);
-        })
-        .catch(error => {
-          console.log('Erro ao obter as letras:', error);
-        });
-    }, 1000); // Atualizar a cada segundo
-  </script>
-</body>
-</html>
+.slide_info {
+    display: none;
+}
