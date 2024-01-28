@@ -1,30 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Legenda do Holyrics</title>
   <style>
     body {
       margin: 0;
-      padding: const style = document.createElement('style');
-style.innerHTML = `
-  .text-custom span {
-    display: inline;
-    background: #006400;
-  }
-
-  .bible-header-custom {
-    margin: auto !important;
-    margin-bottom: 0.2em !important;
-    display: table !important;
-  }
-
-  #invisible .bible-header-custom {
-    margin: auto !important;
-    margin-bottom: 0.2em !important;
-    display: table !important;
-  }
-`;
-
-document.head.appendChild(style);0;
+      padding: 0;
       background-color: black;
       font-family: Arial, sans-serif;
     }
@@ -39,6 +20,23 @@ document.head.appendChild(style);0;
       font-size: 24px;
       line-height: 1.5;
     }
+
+    .text-custom span {
+      display: inline;
+      background: #006400;
+    }
+
+    .bible-header-custom {
+      margin: auto !important;
+      margin-bottom: 0.2em !important;
+      display: table !important;
+    }
+
+    #invisible .bible-header-custom {
+      margin: auto !important;
+      margin-bottom: 0.2em !important;
+      display: table !important;
+    }
   </style>
 </head>
 <body>
@@ -49,7 +47,7 @@ document.head.appendChild(style);0;
 
     // Função para atualizar a legenda
     function updateLyrics(lyrics) {
-      lyricsContainer.innerText = lyrics;
+      lyricsContainer.innerHTML = lyrics;
     }
 
     // Simulação de atualização em tempo real das letras
