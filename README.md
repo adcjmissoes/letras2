@@ -6,9 +6,12 @@
     #lyrics-container {
       width: 800px;
       height: 400px;
-      background-color: black;
+      background-color: transparent;
       color: white;
       padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
     }
   </style>
 </head>
