@@ -1,80 +1,32 @@
-body {
-    margin: 0;    
-}
-#general {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;    
-}
-#display{
-    text-align: center;
-    width: 100%;
-    height: 100%;    
-    color: white;
-}
-#visible {
-    padding-left: 2%;
-    padding-right: 2%;
-    font-family: "Arial";
-}
-#invisible {
-    visibility: hidden;
-    width: 96%;
-    font-family: "Arial";
-}
-#alert {
-    position: absolute;
-    text-align: center;
-    top: 100%;
-    width: 100%;
-    height: 15%;
-    font-size: 64px;
-}
-#alert-invisible {
-    display: none;
-    visibility: hidden;
-}
-#img64 {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    position: inherit;
-}
-span.header {
-    display: block;
-    margin-bottom: 3vh; /*2.5%*/
-    white-space: nowrap;
-}
-
-span.page-count {
-    font-size: 70%;
-    display: block;
-    white-space: nowrap;
-    text-align: right;
-}
-
-.marquee {
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    border-top: 0px black solid;
-}
-
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    text-indent: 0;
-    animation: marquee 5s linear infinite;
-    -webkit-animation: marquee 5s linear infinite;
-}
-@keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-
-.slide_info {
-    display: none;
-}
+**!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <title>Holyrics - Receber Transmissão (Texto)</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="utilities.css">
+        <link rel="stylesheet" type="text/css" href="custom-css2.css">
+        <script src="jquery-1.8.3.js"></script>
+        <script src="holyrics-plugin-json-stream-1.0.4.js"></script>
+    </head>
+    <body onload="setTimeout('bodyOnload()', 100)" onresize="updateOnResize()">
+        <div id='general' class='screen-custom' ondblclick='fullscreenToggle()'>
+            <div id='display' class='text-custom'><div id='visible'></div><div id='invisible'></div></div>
+            <div class='marquee alert-custom' id='alert'></div>
+            <div id='alert-invisible' class='alert-custom'></div>
+            <div id='slide_info' class='slide_info'>
+                <div id='music_title' class='music_title'></div>
+                <div id='music_artist' class='music_artist'></div>
+                <div id='music_author' class='music_author'></div>
+                <div id='text_title' class='text_title'></div>
+            </div>
+        </div>
+        <div id="snackbar"></div>
+        <div id="modal" class="modal"></div>
+        <script type='text/javascript' src="holyrics-plugin-utils-1.0.1.js"></script>
+        <script type='text/javascript'>
+            htmlType = 1;
+cssHash = '0';
+        </script>
+    </body>
+</html>**
