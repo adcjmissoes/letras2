@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Legenda do Holyrics</title>
   <style>
-    #lyrics-container {
-      width: 800px;
-      height: 400px;
-      background-color: transparent;
-      color: white;
-      padding: 20px;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
       font-family: Arial, sans-serif;
-      font-size: 18px;
+    }
+
+    #lyrics-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
       line-height: 1.5;
     }
   </style>
